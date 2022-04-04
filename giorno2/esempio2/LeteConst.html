@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
+    <meta name="description" content="">
+    <title>Let e Const</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        var nome = "Mario";
+
+        console.log(nome);
+        {
+            nome = "Salvo";   // siccome questo blocco di codice è pubblico l'output esterno rimane con la variabile dichiarata all'interno del blocco
+            console.log(nome);
+        }
+        console.log(nome);
+
+        var numero = 10;
+        console.log(numero);
+        {
+            let numero = 12;             // se si usa let avviene il block scope, cioè la variabile viene bloccata dentro al blocco
+            console.log(numero);
+            let numero2 = 8;
+            console.log(numero2);
+        }
+        console.log(numero);
+       /* console.log(numero2); */           // numero 2 non è una variabile definita perchè chiamata solamente all'interna del blocco, all'esterno essa non esiste
+
+
+        var pet= "gatto" ;
+        console.log(pet); 
+        {
+        const pet = "cane";
+        console.log(pet);                  //const blocca la riassegnazione delle variabili nelle variabili dichiarate, anche const risponde alla logica del blocco, sarà costante solo all'interno 
+        }                                 //del blocco quando dichiarata una costante deve anche essere definita, perchè se non è definita sarà messa come costante il valore predefinito della variabile
+        console.log(pet);                   // quando una costante viene cambiata genererà errore
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
+    <meta name="description" content="">
+</head>
+
+<body>
+    <h1>Direttive di output</h1>
+
+    <div id="test"></div>
+
+    <h2 id="prova">Sono un titolo</h2>
+
+
+    <button type="button" onclick="document.write('Scrivi qualchosa')">Clicca</button>   <!--  tutta la struttura HTML si cancella e si riscrive il document  -->
+    
+    <script>
+        // window.alert ('Mi chiamo Jacopo')
+        // alert(2+3);
+        document.write(10);    //anche se scritto prima il document write viene prima indicato l'inner HTML perchè targettizzati sul div e l'h2 
+
+        document.getElementById('test').innerHTML = 3 + 4;
+
+        document.getElementById('prova').innerHTML = 'Contenuto che sostituisce';
+
+        
+        console.log( 3 * 4);
+        console.log( 'Hello world');
+    </script>
+</body>
+
+</html>

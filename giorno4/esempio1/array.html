@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
+    <meta name="description" content="">
+    <title>Array</title>
+</head>
+
+<body>
+    <h2 id="provaLista"></h2>
+    <h2 id="provaLista1"></h2>
+    <h2 id="provaLista2"></h2>
+
+
+    <script>
+        var animali = ["gatto", "cane", "diocane"]; //per definire gli array utilizziamo sempre var, gli ordini della lista sono indicizzati ed iniziano da 0
+
+        var animali1 = [
+            "gatto",
+            "cane",
+            "coniglio"
+
+        ];                                          //si può andare a capo neglia rray senza avere nessun errore
+
+        console.log("animali :" + animali);
+        console.log(typeof animali);
+
+        var matricole = [
+            12,
+            345,
+            45
+        ];
+
+        console.log("matricole :" + matricole);
+        console.log(typeof matricole);
+
+        var anni = new Array(                        //in questo caso si crea un array attraverso il paradigma della obj sennò è uguale, entrambi oggetti
+            1920,
+            1965,
+            2013
+        );
+
+        console.log("anni :" + anni);
+        console.log(typeof anni);
+
+        var studente = {
+            matricola: 234,
+            nome: "Mario",
+            corso: "Javascript"
+        };
+        console.log("studente :" + studente);
+        console.log(typeof studente);
+        console.log(studente);          //se non si aggiunge altro se non l'array allora verrà visualizzato come una tendina da aprire già indicizzato
+        //se si richiamerà dopo l'indice dell'array uscirà un undefined
+
+        document.getElementById('provaLista').innerHTML = animali[2];
+        console.log(animali[1]);
+
+        document.getElementById('provaLista1').innerHTML = studente.corso;
+
+        document.getElementById('provaLista2').innerHTML = animali.toString();        //utilizzando il toString() si riesce a visualizzare l'array come stringa
+
+        console.log(animali.sort()) ;                         //con sort si riordinano gli array tramite ordine alfabetico 
+
+    </script>
+</body>
+
+</html>

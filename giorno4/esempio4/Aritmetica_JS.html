@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
+    <meta name="description" content="">
+    <title>Aritmetica JS</title>
+</head>
+
+<body>
+   
+
+
+    <script>
+       // modulo(resto) e potenza 
+
+       let modulo = 10 % 3 ;
+       console.log(modulo);
+       let modulo1= 12 % 4;
+       console.log(modulo1);
+       let potenza= 2 ** 2;
+       console.log(potenza);
+
+       //inceremento e decremento con ++ si incrementa una variaible di uno e con -- di decrementa di 1
+       //le operazioni vengono eseguite serguendo le regole della matematica cioè prima le operazioni dentro le parentesi dopo le potenze, poile moltiplicazioni o le 
+       //divisioni e poi somma e sottrazione
+
+       //Math è un oggetto per la matematica con metodi per le approssimazioni, identificazioni del numero e potenza radice quadrata ed assoluto
+
+       let numero2  = 6.4;
+       console.log(Math.round(numero2));  //round approssima all'intero più vicino 
+       let numero3= 6.6;
+       console.log(Math.round(numero3)); 
+      
+       console.log(Math.ceil(numero2));  // ceil approssima all'intero superiore    (per eccesso)
+       console.log(Math.floor(numero3)); // cell'approssima all'intero inferiore (per difetto)
+
+       console.log(Math.pow(3,4));     //pow fa la potenza del primo elemento per il secondo
+       console.log(Math.sqrt(4));       //radice quadrata
+       console.log(Math.abs(-8.9));         //fa l'assoluto di un numero, il modulo |numero|, cioè il valore che assegna ad un numero negativo quello positivo
+
+       console.log(Math.sign(-10));    //indica il segno del numero
+       console.log(Math.sign(0));
+       console.log(Math.sign(10)); 
+
+       
+
+    </script>
+</body>
+
+</html>

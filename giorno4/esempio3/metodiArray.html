@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
+    <meta name="description" content="">
+    <title>Metodi array</title>
+</head>
+
+<body>
+    <h2 id="provaLista"></h2>
+    <h2 id="provaLista1"></h2>
+    <h2 id="provaLista2"></h2>
+
+
+    <script>
+        //pop e push, pop estrae ed elimina l'ultimo elemento dell'array e push mette un elemento nell'ulitmo posto dell'array
+
+        let animali = [
+            'cane', 'gatto', 'coniglio', 'criceto'
+        ];
+        console.log(animali);
+
+        let variabilePop= animali.pop();
+        console.log(variabilePop);
+        console.log(animali);
+
+        let variabilePush=animali.push('leone');
+        console.log(variabilePush);                    //legge la lenght della lista dopo l'aggiunta dell'elemento
+        console.log(animali); 
+
+        //shift ed unshift fanno le stesse cose di pop e push ma con il primo elemento
+
+        let varShift= animali.shift();
+        console.log(varShift);
+        console.log(animali);
+
+        let varUnShift= animali.unshift("Blackino");
+        console.log(varUnShift);
+        console.log(animali);
+
+        //delete e splice , il delete va fatto su di una posizione specifica e splice crea una nuova lista aggiungendo elementi nella posizione indicata questo metodo
+        //ricolloca e cancella
+
+        let varDelte= delete animali[2];  // lo spazio che rimane è vuoto ma continua ad esistere
+        console.log(animali);
+
+        let varSplice= animali.splice(1,1,"pantera");  //si indica da dove si inizia a copiare e per quanto con i due parametri e cosa metterci al loro posto
+        console.log(animali);                           //un letterale taglio e sutura
+        console.log(varSplice);
+
+        let varSplice2= animali.splice(2,2, "caspita","accidenti");
+        console.log(animali);
+        console.log(varSplice2);
+
+        //concatenazione con array con concat, nuovi array fatti da più array
+
+        let pet1 = ['cane','black'];
+        let pet2 = ['mi manchi','cucciolo'];
+        let pet3 = ['ti voglio','bene'];
+
+        let petConcat = pet1.concat(pet2,pet3);
+        console.log(petConcat);
+        
+        //slice estrazione elementi da array parametri posizionali .slice(1,2) significa che si inizia dalla posizione 1 fino alla 2 escluso l'arrivo
+
+        var fiori= ["papavero", "coca","marijuana", "girasoli"];
+        var fioriSlice= fiori.slice(1,2);
+        console.log(fiori);
+        console.log(fioriSlice);
+        var fioriSlice1= fiori.slice(1,3);
+        console.log(fioriSlice1);
+        console.log(fiori);
+    </script>
+</body>
+
+</html>

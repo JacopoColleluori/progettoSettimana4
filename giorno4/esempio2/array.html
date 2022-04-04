@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
+    <meta name="description" content="">
+    <title>Metodi</title>
+</head>
+
+<body>
+    <h2 id="provaLista"></h2>
+    <h2 id="provaLista1"></h2>
+    <h2 id="provaLista2"></h2>
+
+
+    <script>
+        let saluto =" Ciao a tutti,a quelli belli e a quelli  brutti";
+
+        let ricerca = saluto.indexOf('a');      //indexOf utilizzabile sia con array che con stringhe restituisce il valore della posizione dell'elemento posizionato
+        console.log(ricerca);                  //in questo caso vede la prima a che trova quindi quella in Ciao e fa 0=C, 1=i, e 2=a 
+        
+        ricerca = saluto.indexOf('a',4);        // avendo impostato la posizione 4  cioè la o in Ciao indexOf trova la a nel 5 posto
+        console.log(ricerca);   
+        
+        //indexOf
+       
+        ricerca = saluto.indexOf('quelli');  
+        console.log(ricerca);   
+        ricerca = saluto.lastIndexOf('quelli');  // prende l'ultimo valore di quello dichiarato
+        console.log(ricerca); 
+       
+        //search
+        ricerca = saluto.search('Ciao');        //prende la posizione da dove parte il valore immesso
+        console.log(ricerca);  
+       
+        //lenght
+        console.log(saluto.length);         //per vedere la lunghezza delle stringhe si usa il .lenght      
+                             
+        //slice() substring() e substr()
+        //slice
+          console.log(saluto.slice(7,12));   //taglia la stringa definita e viene riportata, se si mette un numero unico taglia fino a lì e riporta il resto
+          console.log(saluto.slice(12))  ;     //se si utilizza un numero negativo riparte dalla fine
+          console.log(saluto.slice(-14,-7));                              
+        
+        //substring, analogo solo che non si utilizza la posizione negativa
+
+        //substr uguale a slice ma con il secondo parametro si indica la lunghezza della stringa estratta esempio .substr(4,6) dalla posizione 4 per 6 caratteri
+        //si possono lavorare per numeri negativi
+        console.log(saluto.substr(7,12));
+        
+
+        //sostituzione stringhe con replace replace ("parola da sostituire","parola che sostituisce" ), sostituisce solo la prima occorrenza della parola specificata
+        var sostituisci = saluto.replace ('brutti', 'bellissimi'); // con replaceAll tutte le occorrenze della parola vengono sostituite
+        console.log(sostituisci);
+        sostituisci= saluto.replaceAll('quelli', 'qualsivoglia');
+        console.log(sostituisci);
+
+         // toLowerCase() trasfomra in minuscolo toUpperCase() trasforma in maiuscolo
+
+         //si può utilizzare concat() per fare la stessa cosa + tra le stringhe, la concatenazione
+         var concatena = saluto.concat(" mamma mia 50 minuti sono troppi, troppa robba");
+         console.log(concatena);
+
+         //trim() toglie gli spazi vuoti di una stringa charAt() si indica un carattere nella posizione indicata
+         var tagliatina= saluto.trim();
+         console.log(tagliatina);
+
+         var posizioneChar= saluto.charAt(6);
+         console.log(posizioneChar);
+
+         //split () suddivide la stringa nei suoi elementi 
+         var splittata= "mamma mia 50 minuti";
+         var splittata1= splittata.split(''); //divide così i singoli carattero in apici singoli o doppi
+
+         console.log(splittata1);
+    </script>
+</body>
+
+</html>

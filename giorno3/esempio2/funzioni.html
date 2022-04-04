@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
+    <meta name="description" content="">
+    <title>le Funzioni</title>
+</head>
+
+<body>
+
+
+    <script>
+        var nome = "JC";
+        var job = "fallito";
+
+        document.write(testHoisting() + "<br>");       // hoisting cioè sollevare un elemento eseguire una funzione prima che sia dichiarata, utilizzato anche per variabili
+        //definizione della funzione   
+        function datiUtente() {
+            document.write("Mi chiamo: " + nome + "e sono un : " + job + "<br>");
+            alert("Mi chiamo: " + nome + "e sono un : " + job);
+        }
+        function somma() {
+            return 4 * 3;                               //restituisce un valore e ferma la funzione
+        }
+
+
+
+
+        function testHoisting() {
+            return "L'hoisting funziona"
+        }
+        // invocazione funzione
+        datiUtente();
+        document.write(somma() + "<br>" );
+
+
+        
+        let usoThis = this;
+        console.log ("Io sono: "+ usoThis);
+        document.write (typeof usoThis);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
+    <meta name="description" content="">
+    <title>Stringhe / Escape</title>
+
+</head>
+
+<body>
+    <h3>Prove di escape</h3>
+    <p id="escape"></p>
+    <script>
+        document.getElementById('escape').innerHTML="Hai letto \"la bibbia\" ?";
+
+        var backslash = "Questo : \\ è un backslash ";    // se si scrive con un solo "\" il backslash non verrà visto  se ne devono utilizzare due
+        alert(backslash);
+
+
+        document.getElementById('escape').innerHTML= "hello \n\
+        world" ;
+
+        document.getElementById('escape').innerHTML= "hello \
+        world" ;
+
+        document.getElementById('escape').innerHTML="Hello "    // la sintassi consigliata per andare a capo nel codice è concatenare più stringhe
+        +"world" ; 
+
+        var nome1 = new String("Mario");        //una variabile può essere definita con new e facendo così con il typeOf si ottiene un oggetto perchè figlia della classe
+                                                //string
+    </script>                                                       
+</body>
+
+</html>

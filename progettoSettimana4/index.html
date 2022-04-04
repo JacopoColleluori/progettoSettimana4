@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
+    <meta name="description" content="">
+    <title>Calcolatrice</title>
+    <link rel="stylesheet" href="../progettoSettimana4/custom.css">
+</head>
+
+<body>
+   <div class="container d-flex justify-content-center"> 
+       <h1 >La mia calcolatrice in JS</h1>
+    </div>
+
+    <div class="container w-25 pt-3 mt-5 border border-dark rounded">
+       <div class="container d-flex justify-content-center"> <h3 >JC Calculator</h3></div>
+        <!-- riga 0-->
+        <div class="row p-3">
+            <h4 id="results" class="w-100 border border-dark d-flex justify-content-end  mt-3 bg-dark text-light" > 0  </h4>
+         </div>
+        <!-- riga 1-->
+        <div class="row p-2">
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100" onclick="show(7)">7</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100"  onclick="show(8)">8</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100"  onclick="show(9)">9</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100" id="btnDiv" onclick="div()">/</button>
+            </div>
+        </div>
+        <!-- riga 2-->
+        <div class="row  p-2">
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100" onclick="show(4)">4</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100" onclick="show(5)">5</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100" onclick="show(6)">6</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100" id="btnX" onclick="mol()">X</button>
+            </div>
+        </div>
+        <!-- riga 3-->
+        <div class="row p-2">
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100" onclick="show(1)">1</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100" onclick="show(2)">2</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100"  onclick="show(3)">3</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100 " id="btnMeno" onclick="sottr()" >-</button>
+            </div>
+        </div>
+        <!-- riga 4-->
+        <div class="row  p-2">
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100"  onclick="cancel()">C</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100" onclick="show(0)">0</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100" onclick="show('.')">.</button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-dark w-100" id="btnPlus" onclick="somma()">+</button>
+            </div>
+        </div>
+        <!-- riga 5-->
+        <div class="row p-2">
+            <div class="col">
+                <button type="button" class="w-100 btn p-2 btn-dark fs-4" id="btnRes" onclick="risultato()">=</button>
+            </div>
+
+        </div>
+
+    </div>
+     
+    <script src="js/newscript.js">
+        
+    </script>
+</body>
+
+</html>

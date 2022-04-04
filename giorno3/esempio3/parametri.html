@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
+    <meta name="description" content="">
+    <title>funzioni con parametri</title>
+
+</head>
+
+<body>
+
+
+    <script>
+
+        function somma(numero1, numero2) {
+            return numero1 + numero2;
+        }
+        document.write(somma(10, 3) + "<br>");
+
+        function somma1(numero1, numero2) {
+            return numero1 + 5;
+        }
+        document.write(somma1(9));
+
+        var sottrazione = function (numero1, numero2) {
+            return numero1 - numero2;
+        }
+        alert(sottrazione(18, 9));
+
+        var operazione = sottrazione(10, 2);
+        alert(operazione);
+
+        var saluto = "ciao a tutti";
+
+        (function () {                                                       //funzioni anonime, funzioni auto invocate  cioè dopo la definizione non serve invocarle                                          
+            console.log(saluto);
+        })();
+
+        var luogo = "Firenze";
+
+        function utente() {
+            var nome = "JC ";                                     //scope delle variabili locale o globale essendo in questo caso locale non può essere vista al di fuori
+            alert("Mi chiamo: " + nome + "e sono di: " + luogo)   // della funzione, infatti darà errore                                                       
+        }
+        utente();
+        function operazioni (){
+            var num = 10;
+            function somma3(){
+                console.log(num + num);
+            }
+            return somma3();
+        }
+        operazioni();
+        console.log(somma());                                     // È una funziona locale quindi non può venire richiamata fuori dalla funzione operazioni
+
+
+        function saluto (){
+            return  "Hello world!"; 
+        }
+
+        saluto = () => {return "Hello world!"};                   //uguale alla funzione sopra
+    </script>
+</body>
+
+</html>

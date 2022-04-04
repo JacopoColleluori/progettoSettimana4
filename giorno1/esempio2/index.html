@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
+    <meta name="description" content="">
+                                                         <!-- questo script è indipendente e può quindi essere dichiarato nell head -->
+   <script>
+       var numero=7;
+       document.write(numero);   
+   </script>
+
+</head>
+
+<body> 
+
+    <h1 id="colore"> Il magnifico mondo di javascript</h1>
+    <button onclick="changeColor()">clicca e cambia</button>
+   
+    
+
+    <script src="../esempio2/js/myscript.js"></script>
+                                                                <!-- questo script somma dipende da quello sopra -->
+    <script> 
+        document.write(somma()); 
+    </script>
+
+</body>
+
+</html>
